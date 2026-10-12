@@ -16,3 +16,10 @@ class Compte {
     }
   }
 }
+
+void main() {
+  var compte = Compte('CA-001');
+  compte.depot(150);
+  compte.depot(-20); // refusé
+  print('Compte ${compte.numeroCompte} - Solde : ${compte.solde}'); // 150.00 $
+}
