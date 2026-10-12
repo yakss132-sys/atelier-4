@@ -7,4 +7,12 @@ class Compte {
 
   // Getter public : solde formaté en dollars
   String get solde => '${_solde.toStringAsFixed(2)} \$';
+
+  void depot(double montant) {
+    if (montant > 0) {
+      _solde += montant;
+    } else {
+      print('Dépôt refusé : le montant doit être positif.');
+    }
+  }
 }
