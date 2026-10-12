@@ -29,3 +29,16 @@ class Film extends Media {
     print('Ceci est un Film : $titre ($dureeMinutes minutes).');
   }
 }
+
+void main() {
+  List<Media> catalogue = [];
+
+  catalogue.add(Livre('Le Petit Prince', 'Antoine de Saint-Exupéry'));
+  catalogue.add(Livre('Les Misérables', 'Victor Hugo'));
+  catalogue.add(Film('Inception', 148));
+  catalogue.add(Film('Le Voyage de Chihiro', 125));
+
+  for (var media in catalogue) {
+    media.afficherType(); // polymorphisme : la bonne version est appelée
+  }
+}
