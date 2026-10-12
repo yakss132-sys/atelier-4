@@ -2,5 +2,7 @@ class Tache {
   String description;
   static int nombreTotal = 0;
 
-  Tache(this.description);
+  Tache(this.description) {
+    nombreTotal++; // incrémenté à chaque création
+  }
 }
