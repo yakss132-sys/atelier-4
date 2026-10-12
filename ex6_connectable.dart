@@ -27,3 +27,15 @@ class BaseDeDonnees implements Connectable {
     print('BaseDeDonnees : Session fermée.');
   }
 }
+
+void main() {
+  var serveur = ServeurAPI();
+  var bd = BaseDeDonnees();
+
+  List<Connectable> services = [serveur, bd];
+
+  for (var service in services) {
+    service.connecter('Yaqoub');
+    service.deconnecter();
+  }
+}
