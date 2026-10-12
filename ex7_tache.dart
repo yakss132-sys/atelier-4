@@ -6,3 +6,11 @@ class Tache {
     nombreTotal++; // incrémenté à chaque création
   }
 }
+
+void main() {
+  Tache('Faire les courses');
+  Tache('Réviser le cours de Dart');
+  Tache('Pousser l\'atelier sur GitHub');
+
+  print('Nombre total de tâches : ${Tache.nombreTotal}'); // 3
+}
